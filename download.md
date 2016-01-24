@@ -29,6 +29,8 @@ at present is 3.5:
 $ git checkout release/3.5
 {% endhighlight %}
 
+You can also view our source repository on [GitHub](https://github.com/charybdis-ircd/charybdis).
+
 ## Building
 
 To build charybdis, run the following commands from your charybdis source directory:
