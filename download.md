@@ -16,28 +16,28 @@ Older versions are available at [distfiles.charybdis.io](http://distfiles.charyb
 
 The charybdis ircd sources are maintained on GitHub.  To clone the repository, run these commands:
 
-```!sh
+{% highlight bash %}
 $ git clone https://github.com/charybdis-ircd/charybdis
 $ cd charybdis
-```
+{% endhighlight %}
 
 This will check out the *master* branch by default, which has experimental code that may or may not be
 suitable for production networks.  We recommend checking out the stable release series branch, which
 at present is 3.5:
 
-```!sh
+{% highlight bash %}
 $ git checkout release/3.5
-```
+{% endhighlight %}
 
 ## Building
 
 To build charybdis, run the following commands from your charybdis source directory:
 
-```!sh
+{% highlight bash %}
 $ ./configure
 $ make
 $ make install
-```
+{% endhighlight %}
 
 By default, the charybdis binary distribution will be installed into `$HOME/ircd`.  We recommend using
 this deployment method.
