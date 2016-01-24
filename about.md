@@ -20,7 +20,7 @@ Interesting features that charybdis has include:
   * TLS encrypted client and server connections
   * Multi-process sandbox architecture for enhanced security, scalability and robustness
   * Easy to understand configuration
-  * A complete user and operator's manual
+  * [A complete user and operator's manual](http://www.stack.nl/~jilles/irc/charybdis-oper-guide/index.html)
 
 Many of the largest networks in the world use charybdis-based IRC servers, including freenode, EsperNet, DarkMyst and others, because of it's
 proven scalability, security and robustness track records.
