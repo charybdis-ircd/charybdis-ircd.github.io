@@ -21,7 +21,7 @@ layout: default
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} <small><span class="post-meta">({{ post.date | date: "%b %-d, %Y" }})</span></small></a>
         </h3>
 
-        <p>{{ post.excerpt }}</p>
+        <p>{{ post.excerpt | markdownify }}</p>
       </li>
     {% endfor %}
   </ul>
