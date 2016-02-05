@@ -1,4 +1,6 @@
 title: charybdis
 markdown: kramdown
-#gems:
-#  - jekyll-sitemap
+gems:
+  - jekyll-sitemap
+sitemap:
+  file: "/sitemap.xml"
