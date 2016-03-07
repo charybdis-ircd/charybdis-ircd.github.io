@@ -17,12 +17,12 @@ Enter AV2
 * `mapi_module_version` can now be NULL with no ill consequences - it is replaced with the current IRC daemon version if NULL. Leaving it NULL is only encouraged for bundled extensions. The rationale for this change is that the "version" tag was meant for the bad old days of CVS and SVN. As a result, most of the tags had not been updated for over 7 years (or even since Ratbox).
 * `mapi_cap_list` is now an entry in the header of type `mapi_cap_list_av2`. This was to avoid the boilerplate that was cropping up all over the place resulting in needless module initialisation functions with this sole purpose. More on this below.
 * `mapi_module_description` is now an entry in the header of type `const char *`. It provides a human-readable description of the module for administrators.
-* The provenance of a module, called its origin, is tracked by the ircd based on how it is loaded. This is shown in MODLIST and will be used soon to open up a partial version of MODLIST to **all** users.
+* The provenance of a module, called its origin, is tracked by the ircd based on how it is loaded. This is shown in /MODLIST and will be used soon to open up a partial version of /MODLIST to **all** users.
 
 What this means for administrators
 ==================================
 
-This means that administrators will see human-readable descriptions for all the modules in Charybdis when they use /MODLIST, and any third-party modules using AV2 that provide a description. This also means that a partial view of MODLIST will soon be open to all users for transparency purposes. Users will not be able to see module addresses (as this presents a possible attack vector for exploits), but will be able to see what modules are loaded and what they do.
+This means that administrators will see human-readable descriptions for all the modules in Charybdis when they use /MODLIST, and any third-party modules using AV2 that provide a description. This also means that a partial view of /MODLIST will soon be open to all users for transparency purposes. Users will not be able to see module addresses (as this presents a possible attack vector for exploits), but will be able to see what modules are loaded and what they do.
 
 We believe this is a positive thing as it will keep IRC operators who use Charybdis honest about what they're really running on their networks. There is nothing to be gained by obfuscating this watered-down MODLOAD, other than hiding abusive features from users (which we consider unethical).
 
