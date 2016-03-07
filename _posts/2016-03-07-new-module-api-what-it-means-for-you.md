@@ -5,7 +5,7 @@ title:  "The new module API and what it means for you"
 
 Since ratbox, `DECLARE_MODULE_AV1` has been the way that the symbol for the module header has been created. It has stayed stable throughout 10 years of its existence in Charybdis and longer in Ratbox.
 
-Although Charybdis itself has never really had a stable ABI, the ''API'' has largely had additive changes, and maybe the occasional parameter addition to a function or addition to a struct. Thus, it has remained effectively compatible for many years.
+Although Charybdis itself has never really had a stable ABI, the **API** has largely had additive changes, and maybe the occasional parameter addition to a function or addition to a struct. Thus, it has remained effectively compatible for many years.
 
 This update drastically breaks with the past and is a big leap forward for Charybdis. Extension authors and those who work on derivatives of Charybdis should take note!
 
@@ -17,7 +17,7 @@ Enter AV2
 * `mapi_module_version` can now be NULL with no ill consequences - it is replaced with the current IRC daemon version if NULL. Leaving it NULL is only encouraged for bundled extensions. The rationale for this change is that the "version" tag was meant for the bad old days of CVS and SVN. As a result, most of the tags had not been updated for over 7 years (or even since Ratbox).
 * `mapi_cap_list` is now an entry in the header of type `mapi_cap_list_av2`. This was to avoid the boilerplate that was cropping up all over the place resulting in needless module initalisation functions with this sole purpose. More on this below.
 * `mapi_module_description` is now an entry in the header of type `const char *`. It provides a human-readable description of the module for administrators.
-* The provenance of a module, called its origin, is tracked by the ircd based on how it is loaded. This is shown in MODLIST and will be used soon to open up a partial version of MODLIST to ''all'' users.
+* The provenance of a module, called its origin, is tracked by the ircd based on how it is loaded. This is shown in MODLIST and will be used soon to open up a partial version of MODLIST to **all** users.
 
 What this means for administrators
 ==================================
