@@ -15,7 +15,7 @@ Enter AV2
 "AV2" is what we have dubbed the new module header API, since you use `DECLARE_MODULE_AV2` to use it. It adds and alters the following fields in the header declaration:
 
 * `mapi_module_version` can now be NULL with no ill consequences - it is replaced with the current IRC daemon version if NULL. Leaving it NULL is only encouraged for bundled extensions. The rationale for this change is that the "version" tag was meant for the bad old days of CVS and SVN. As a result, most of the tags had not been updated for over 7 years (or even since Ratbox).
-* `mapi_cap_list` is now an entry in the header of type `mapi_cap_list_av2`. This was to avoid the boilerplate that was cropping up all over the place resulting in needless module initalisation functions with this sole purpose. More on this below.
+* `mapi_cap_list` is now an entry in the header of type `mapi_cap_list_av2`. This was to avoid the boilerplate that was cropping up all over the place resulting in needless module initialisation functions with this sole purpose. More on this below.
 * `mapi_module_description` is now an entry in the header of type `const char *`. It provides a human-readable description of the module for administrators.
 * The provenance of a module, called its origin, is tracked by the ircd based on how it is loaded. This is shown in MODLIST and will be used soon to open up a partial version of MODLIST to **all** users.
 
@@ -34,7 +34,7 @@ As aforementioned, users will soon be able to use /MODLIST to see potentially ab
 What this means for module developers
 =====================================
 
-For the time being, AV1 will remain supported. However, it is encouraged to move to AV2 eventually for the benefits it brings, including description strings and CAP lists. AV1 should be considered deprecated and slated for removal in 3.7, as nothing in Charybdis relies on it now. Old modules will continue to work for the time being.
+For the time being, AV1 will remain supported. However, it is encouraged to move to AV2 eventually for the benefits it brings, including description strings and CAP lists. AV1 should be considered deprecated and slated for removal in 4.0, as nothing in Charybdis relies on it now. Old modules will continue to work for the time being.
 
 CAP lists
 ---------
