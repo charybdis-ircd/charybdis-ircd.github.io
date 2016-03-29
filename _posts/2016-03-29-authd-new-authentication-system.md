@@ -3,9 +3,6 @@ layout: post
 title:  "authd: a new authentication system for charybdis"
 ---
 
-Background
-==========
-
 Since the inception of ircd (the late 80's), ident and DNS lookups have been done in the ircd process. In almost every ircd 2.7 (ircu/snircd) or 2.8 (hyrbid/ratbox/charybdis/dreamforge/unreal/bahamut/etc.) derivative, they are still done in the main ircd (though ratbox moved DNS to its own daemon). Obviously they've all undergone iterations over the years (such as removal of the DNS cache from hybrid before the ratbox fork, and the way idents are checked has been tweaked in most IRC daemons), but overall the architecture is essentially unchanged.
 
 The reasoning behind doing these lookups in-process is that DNS and ident lookups were only done once per connection (in what I will call the ***pre-registration process***, performed by the ***pre-registration mechanism***, which has to do with clients "registering" with the server, not services), and therefore should only use negligible resources compared to everything else going on. While it's still true ident lookups are still only done once per connection, in Charybdis, DNS connections are not. In Charybdis, a DNS lookup is done for every blacklist configured in the IRC daemon once per connecting client (usually resulting in about 3 lookups that have to be processed). Other IRC daemons often use a file descriptor per lookup (though Charybdis does not).
