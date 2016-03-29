@@ -5,9 +5,9 @@ title:  "The new module API and what it means for you"
 
 Since ratbox, `DECLARE_MODULE_AV1` has been the way that the symbol for the module header has been created. It has stayed stable throughout 10 years of its existence in Charybdis and longer in Ratbox.
 
-Although Charybdis itself has never really had a stable ABI, the **API** has largely had additive changes, and maybe the occasional parameter addition to a function or addition to a struct. Thus, it has remained effectively compatible for many years.
+Although Charybdis itself has never really had a stable ABI, the **API** has largely had additive changes, and maybe the occasional parameter addition to a function or change to a struct. Thus, it has remained effectively compatible for many years.
 
-This update drastically breaks with the past and is a big leap forward for Charybdis. Extension authors and those who work on derivatives of Charybdis should take note!
+This update drastically breaks with the past and is a major step forward for Charybdis. Extension authors and those who work on derivatives of Charybdis should take note!
 
 Enter AV2
 =========
@@ -18,6 +18,8 @@ Enter AV2
 * `mapi_cap_list` is now an entry in the header of type `mapi_cap_list_av2`. This was to avoid the boilerplate that was cropping up all over the place resulting in needless module initialisation functions with this sole purpose. More on this below.
 * `mapi_module_description` is now an entry in the header of type `const char *`. It provides a human-readable description of the module for administrators.
 * The provenance of a module, called its origin, is tracked by the ircd based on how it is loaded. This is shown in /MODLIST and will be used soon to open up a partial version of /MODLIST to **all** users.
+* Command handlers now return void instead of int; the return value was useless for considerable time.
+* Modules now have an implicit datecode (built into it at compile time). This determines if the module is too old to be loaded.
 
 What this means for administrators
 ==================================
@@ -57,7 +59,6 @@ We aren't done yet with AV2. We have some more exciting features planned:
 
 * Easier way of defining channel modes similar to how CAPs are defined, and more flexibility in mode types
 * Possibly cleaner `DECLARE_MODULE_AV2` declaration
-* Charybdis-specifc versioning embedded into each module upon build, so the loader can detect incompatible modules.
 
 I also have some other ideas of my own, but those may come at a later date.
 
