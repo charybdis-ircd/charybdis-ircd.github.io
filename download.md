@@ -10,6 +10,10 @@ The current stable release series is 3.5.
 
   * [charybdis 3.5.2 source](http://distfiles.charybdis.io/charybdis-3.5.2.tar.bz2)
 
+The latest testing release series is 4.
+
+ * [charybdis 4-rc1 source](http://distfiles.charybdis.io/charybdis-4-rc1.tar.bz2)
+
 Older versions are available at [distfiles.charybdis.io](http://distfiles.charybdis.io).
 
 ## Latest sources from GitHub

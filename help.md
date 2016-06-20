@@ -13,5 +13,5 @@ If you have questions about charybdis, most likely you can find the answer using
 
 ## IRC channels
 
- * IRC discussion about charybdis is available at [#charybdis on freenode](irc://irc.freenode.net/#charybdis).
- * Testing/QA discussion about charybdis is available at [#charybdis on the charybdis testnet](irc://irc.charybdis.io/#charybdis).
+ * Support and development discussion about charybdis is available at [#charybdis on the charybdis testnet](irc://irc.charybdis.io/#charybdis).
+ * Non-official discussion about charybdis is available at [#charybdis on freenode](irc://chat.freenode.net/#charybdis).
