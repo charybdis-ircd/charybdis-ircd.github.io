@@ -9,6 +9,7 @@ The charybdis project operates both a public, mostly-open linking testnet and a 
 ## TestNet
 
 Round-robin is available at `irc.charybdis.io` port 6667 for plaintext and port 9999 for TLS.
+The official `#charybdis` channel is located here.
 
 ### TestNet servers
 
