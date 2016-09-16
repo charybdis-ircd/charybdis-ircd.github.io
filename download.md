@@ -8,7 +8,7 @@ title: Download charybdis
 
 The current stable release series is 3.5.
 
-  * [charybdis 3.5.2 source](http://distfiles.charybdis.io/charybdis-3.5.2.tar.bz2)
+  * [charybdis 3.5.3 source](http://distfiles.charybdis.io/charybdis-3.5.3.tar.bz2)
 
 The latest testing release series is 4.
 
