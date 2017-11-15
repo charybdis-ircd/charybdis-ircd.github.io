@@ -6,15 +6,10 @@ title: Download charybdis
 
 ## Tarballs
 
-The current stable release series is 3.5.
+The current stable release series are 3.5 and 4.
 
-  * [charybdis 3.5.3 source](http://distfiles.charybdis.io/charybdis-3.5.3.tar.bz2)
-
-The latest testing release series is 4.
-
- * [charybdis 4-rc3 source](http://distfiles.charybdis.io/charybdis-4-rc3.tar.bz2)
-
-Older versions are available at [distfiles.charybdis.io](http://distfiles.charybdis.io).
+ * [charybdis 3.5.5 source](https://github.com/charybdis-ircd/charybdis/archive/charybdis-3.5.5.tar.gz)
+ * [charybdis 4.0 source](https://github.com/charybdis-ircd/charybdis/archive/charybdis-4.0.tar.gz)
 
 ## Latest sources from GitHub
 
@@ -25,9 +20,7 @@ $ git clone https://github.com/charybdis-ircd/charybdis
 $ cd charybdis
 {% endhighlight %}
 
-This will check out the *master* branch by default, which has experimental code that may or may not be
-suitable for production networks.  We recommend checking out the stable release series branch, which
-at present is 3.5:
+This will check out the *release/4* branch by default. If you want to use version 3.5, check it out:
 
 {% highlight bash %}
 $ git checkout release/3.5
@@ -44,6 +37,8 @@ $ ./configure
 $ make
 $ make install
 {% endhighlight %}
+
+Note that version 4 requires you to first run autogen.sh
 
 By default, the charybdis binary distribution will be installed into `$HOME/ircd`.  We recommend using
 this deployment method.
